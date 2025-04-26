@@ -21,17 +21,17 @@ function TestController:OnStart()
     --|=| SERVICE & CONTROLLER REFERENCES
 
     task.delay(3, function()
-        print(TestService:TestFunction())
+        -- print(TestService:TestFunction())
 
-        print(CharacterUtil:GetRootPart(player).Name)
+        -- print(CharacterUtil:GetRootPart(player).Name)
     end)
 
     CharacterUtil:OnCharacterReady(player, function(character)
-        print("Character is ready:", character.Name)
+        -- print("Character is ready:", character.Name)
     end)
 
     TestService.TestSignal:Connect(function(message)
-        print("Received message from server:", message)
+        -- primessager:"Received message from server:"age)
     end)
 end
 

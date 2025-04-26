@@ -22,14 +22,14 @@ local ProfileService = require(ServerStorage.Server.Services.Universal.ProfileSe
 
 --|=| Functions
 function TestService.Client:TestFunction(player: Player)
-    return "Hello from the Server!"
+    -- return "Hello from the Server!"
 end
 
 function TestService:OnStart()
     --|=| SERVICE REFERENCES
     Players.PlayerAdded:Connect(function(player)
         task.delay(3, function()
-            self.Client.TestSignal:Fire(player, "Hello from the server!")
+            -- self.Client.TestSignal:Fire(player, "Hello from the server!")
         end)
     end)
 end
